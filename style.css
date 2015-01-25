@@ -1,0 +1,105 @@
+body {
+	width: 100%
+}
+
+.container {
+	width: 100%;
+}
+
+.content {
+	width: 100%;
+}
+
+html {
+	font-family: PT Sans;
+}
+
+h2, span, p {
+	font-family: PT Sans;
+	color: white;
+	/*font-weight:bold;*/
+}
+
+p {
+	letter-spacing: 0.1em
+}
+
+a {
+	color: red;
+}
+
+h2 {
+	font-size: 16px;
+	font-weight: bold;
+	margin:0px;
+	line-height: 1.2em;
+	text-transform: uppercase;
+	letter-spacing: 0.4em;
+	height: 2em;
+}
+
+ul {
+	width: 100%;
+	padding: 0;
+	margin:0;
+}
+
+li {
+	list-style-type: none;
+	font-family: Georgia;
+	font-size: 14px;
+	width: 50%;
+	padding: 1em;
+	margin: auto;
+	text-align: center;
+	float: left;
+	height: 300px;
+	  -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+.hero-img {
+	width: 80%;
+	float: none;
+	margin: 1em 10%;
+	transition: 0.2s;
+	opacity:1.0;
+	border-radius: 50%;
+}
+
+.hero-img:hover {
+	transition: 0.2s;
+	opacity:0.6;
+}
+
+select {
+	font-family: PT Sans;
+text-align: center;
+height: 50px;
+background: #e6e7e8;
+/* padding: 50px; */
+margin: 2em 1em;
+border: none;
+width: 60%;
+}
+
+option {
+	text-align: center;
+}
+
+.top {
+	text-align: center;
+	display:block;
+	margin: 1em auto;
+}
+.thing1:not(target){
+  display:none;
+  transition: 1s;
+}
+
+.thing1:target{
+  display:block;
+    transition: 1s;
+}

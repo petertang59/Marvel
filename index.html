@@ -1,0 +1,43 @@
+<html ng-app="HeroApp">
+<head>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="js/controllers.js"></script>
+  <!-- <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/> -->
+  <link rel="stylesheet" href="style.css"/>
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body ng-controller="HeroListCtrl">
+
+<div class="container">
+    <div class="top">
+      <!--Sidebar content-->
+
+
+   Search: <input ng-model="query">
+
+  <br>
+Sort by:
+<select ng-model="orderProp">
+  <option value="name">Alphabetical</option>
+  <option value="age">First Appearance</option>
+  <option value="species">Species</option>
+</select>
+</div>
+<div class="content">
+<ul class="heroes">
+  <li ng-repeat="Hero in Heros | filter:query | orderBy:orderProp" style="background:{{Hero.bgcolor}};">
+    <h2>{{Hero.name}}</h2>
+    <img class="hero-img" src="{{Hero.imageUrl}}"/>
+    <p>{{Hero.age}}
+      <br>{{Hero.snippet}} 
+    <br>
+    {{Hero.species}}</p>
+    <!-- <img src="img/ironman.jpg"/> -->
+  </li>
+</ul>
+  </div>
+</div>
+
+</body>
+</html>
