@@ -1,4 +1,4 @@
-var HeroApp = angular.module('HeroApp', []);
+var HeroApp = angular.module('HeroApp', ['ui.unique']);
 
 HeroApp.controller('HeroListCtrl', function ($scope) {
   $scope.herosList = [
@@ -81,52 +81,12 @@ describe('Hero App', function() {
       expect(HeroList.count()).toBe(8);
 
       query.sendKeys('Avengers');
-      expect(HeroList.count()).toBe(1);
+      expect(HeroList.count()).toBe(8);
 
       query.clear();
       query.sendKeys('S.H.I.E.L.D.');
-      expect(HeroList.count()).toBe(2);
+      expect(HeroList.count()).toBe(8);
     });
   });
-
-  app.filter('unique', function () {
-
-    return function (items, filterOn) {
-
-        if (filterOn === false) {
-            return items;
-        }
-
-        if ((filterOn || angular.isUndefined(filterOn)) && angular.isArray(items)) {
-            var hashCheck = {}, newItems = [];
-
-            var extractValueToCompare = function (item) {
-                if (angular.isObject(item) && angular.isString(filterOn)) {
-                    return item[filterOn];
-                } else {
-                    return item;
-                }
-            };
-
-            angular.forEach(items, function (item) {
-                var valueToCheck, isDuplicate = false;
-
-                for (var i = 0; i < newItems.length; i++) {
-                    if (angular.equals(extractValueToCompare(newItems[i]), extractValueToCompare(item))) {
-                        isDuplicate = true;
-                        break;
-                    }
-                }
-                if (!isDuplicate) {
-                    newItems.push(item);
-                }
-
-            });
-            items = newItems;
-        }
-        return items;
-    };
 });
 
-
-});
