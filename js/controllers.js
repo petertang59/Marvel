@@ -58,10 +58,10 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
      'age': 1964,
      'species': 'Human',
      'imageUrl':'img/hawkeye.png',
-     'bgcolor':'#5b2424'},
+     'bgcolor':'#5b2424'}
   ];
 
-    $scope.orderProp = 'species';
+  $scope.orderProp = 'age';
 });
 
 describe('Hero App', function() {
@@ -88,4 +88,6 @@ describe('Hero App', function() {
       expect(HeroList.count()).toBe(2);
     });
   });
+
+  
 });

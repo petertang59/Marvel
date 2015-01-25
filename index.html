@@ -2,6 +2,7 @@
 <head>
   <script src="bower_components/angular/angular.js"></script>
   <script src="js/controllers.js"></script>
+  <script src="js/angular-filter-master/dist/angular-filter.js"></script>
   <!-- <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/> -->
   <link rel="stylesheet" href="style.css"/>
   <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -27,7 +28,7 @@ Sort by:
   <select ng-model="searchName" ng-options="cc.name for cc in herosList | orderBy:'heros'">
         <option value="">All Heroes</option>
     </select>
-  <select ng-model="searchSpecies" ng-options="cc.species for cc in herosList | orderBy:'heros'">
+  <select ng-model="searchSpecies" ng-options="cc.species for cc in herosList | orderBy:'heros' | unique:'species'">
         <option value="">All Species</option>
     </select>
 </div>
