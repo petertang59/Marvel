@@ -1,7 +1,7 @@
 var HeroApp = angular.module('HeroApp', []);
 
 HeroApp.controller('HeroListCtrl', function ($scope) {
-  $scope.Heros = [
+  $scope.herosList = [
     {'name': 'Iron Man',
       'snippet': 'Avengers',
       'age': 1951, 
@@ -61,7 +61,7 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
      'bgcolor':'#5b2424'},
   ];
 
-  $scope.orderProp = 'age';
+    $scope.orderProp = 'species';
 });
 
 describe('Hero App', function() {
@@ -75,7 +75,7 @@ describe('Hero App', function() {
 
     it('should filter the Hero list as a user types into the search box', function() {
 
-      var HeroList = element.all(by.repeater('Hero in Heros'));
+      var HeroList = element.all(by.repeater('Hero in HerosList'));
       var query = element(by.model('query'));
 
       expect(HeroList.count()).toBe(8);

@@ -23,10 +23,17 @@ Sort by:
   <option value="age">First Appearance</option>
   <option value="species">Species</option>
 </select>
+ 
+  <select ng-model="searchName" ng-options="cc.name for cc in herosList | orderBy:'heros'">
+        <option value="">All Heroes</option>
+    </select>
+  <select ng-model="searchSpecies" ng-options="cc.species for cc in herosList | orderBy:'heros'">
+        <option value="">All Species</option>
+    </select>
 </div>
 <div class="content">
 <ul class="heroes">
-  <li ng-repeat="Hero in Heros | filter:query | orderBy:orderProp" style="background:{{Hero.bgcolor}};">
+  <li ng-repeat="Hero in herosList | filter:query | orderBy:orderProp | filter: searchName | filter: searchSpecies" style="background:{{Hero.bgcolor}};">
     <h2>{{Hero.name}}</h2>
     <img class="hero-img" src="{{Hero.imageUrl}}"/>
     <p>{{Hero.age}}
