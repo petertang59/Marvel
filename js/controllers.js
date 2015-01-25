@@ -3,21 +3,21 @@ var HeroApp = angular.module('HeroApp', []);
 HeroApp.controller('HeroListCtrl', function ($scope) {
   $scope.herosList = [
     {'name': 'Iron Man',
-      'snippet': 'Avengers',
+      'team': 'Avengers',
       'age': 1951, 
       'species': 'Human',
        'imageUrl':'img/ironman.png', 
       'bgcolor':'#9e3d3b'},
     
     {'name': 'Captain America',
-      'snippet': 'Avengers',
+      'team': 'Avengers',
       'age': 1939, 
       'species': 'Genetically Modified Human', 
       'imageUrl':'img/captainamerica.png',
       'bgcolor':'#3c688a'},
     
     {'name': 'Thor',
-      'snippet': 'Avengers', 
+      'team': 'Avengers', 
       'age': 1962,
       'species': 'Asgardian',
       'imageUrl':'img/thor.png',
@@ -25,28 +25,28 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
      },
 
      {'name': 'Hulk',
-     'snippet': 'Avengers',
+     'team': 'Avengers',
      'age': 1962,
      'species': 'Genetically Modified Human',
      'imageUrl':'img/hulk.png',
      'bgcolor':'#48824a'},
 
       {'name': 'Quicksilver',
-      'snippet': 'Avengers',
+      'team': 'Avengers',
       'age': 1964, 
       'species': 'Mutant',
        'imageUrl':'img/quicksilver.png', 
       'bgcolor':'#9dbace'},
     
     {'name': 'Scarlet Witch',
-      'snippet': 'Avengers',
+      'team': 'Avengers',
       'age': 1964, 
       'species': 'Mutant', 
       'imageUrl':'img/scarletwitch.png',
       'bgcolor':'#ff523b'},
     
     {'name': 'Black Widow',
-      'snippet': 'S.H.I.E.L.D.', 
+      'team': 'S.H.I.E.L.D.', 
       'age': 1964,
       'species': 'Human',
       'imageUrl':'img/blackwidow.png',
@@ -54,7 +54,7 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
      },
 
      {'name': 'Hawkeye',
-     'snippet': 'S.H.I.E.L.D.',
+     'team': 'S.H.I.E.L.D.',
      'age': 1964,
      'species': 'Human',
      'imageUrl':'img/hawkeye.png',
@@ -89,5 +89,44 @@ describe('Hero App', function() {
     });
   });
 
-  
+  app.filter('unique', function () {
+
+    return function (items, filterOn) {
+
+        if (filterOn === false) {
+            return items;
+        }
+
+        if ((filterOn || angular.isUndefined(filterOn)) && angular.isArray(items)) {
+            var hashCheck = {}, newItems = [];
+
+            var extractValueToCompare = function (item) {
+                if (angular.isObject(item) && angular.isString(filterOn)) {
+                    return item[filterOn];
+                } else {
+                    return item;
+                }
+            };
+
+            angular.forEach(items, function (item) {
+                var valueToCheck, isDuplicate = false;
+
+                for (var i = 0; i < newItems.length; i++) {
+                    if (angular.equals(extractValueToCompare(newItems[i]), extractValueToCompare(item))) {
+                        isDuplicate = true;
+                        break;
+                    }
+                }
+                if (!isDuplicate) {
+                    newItems.push(item);
+                }
+
+            });
+            items = newItems;
+        }
+        return items;
+    };
+});
+
+
 });

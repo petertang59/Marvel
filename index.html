@@ -2,6 +2,7 @@
 <head>
   <script src="bower_components/angular/angular.js"></script>
   <script src="js/controllers.js"></script>
+  <script src="js/unique.js"></script>
   <script src="js/angular-filter-master/dist/angular-filter.js"></script>
   <!-- <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/> -->
   <link rel="stylesheet" href="style.css"/>
@@ -28,17 +29,17 @@ Sort by:
   <select ng-model="searchName" ng-options="cc.name for cc in herosList | orderBy:'heros'">
         <option value="">All Heroes</option>
     </select>
-  <select ng-model="searchSpecies" ng-options="cc.species for cc in herosList | orderBy:'heros' | unique:'species'">
-        <option value="">All Species</option>
+  <select ng-model="searchTeam" ng-options="cc.team for cc in herosList | orderBy:'heros' | unique:'Team'">
+        <option value="">All Teams</option>
     </select>
 </div>
 <div class="content">
 <ul class="heroes">
-  <li ng-repeat="Hero in herosList | filter:query | orderBy:orderProp | filter: searchName | filter: searchSpecies" style="background:{{Hero.bgcolor}};">
+  <li ng-repeat="Hero in herosList | filter:query | orderBy:orderProp | filter: searchName | filter: searchTeam" style="background:{{Hero.bgcolor}};">
     <h2>{{Hero.name}}</h2>
     <img class="hero-img" src="{{Hero.imageUrl}}"/>
     <p>{{Hero.age}}
-      <br>{{Hero.snippet}} 
+      <br>{{Hero.team}} 
     <br>
     {{Hero.species}}</p>
     <!-- <img src="img/ironman.jpg"/> -->
