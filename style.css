@@ -67,7 +67,7 @@ li {
 	margin: 1em 10%;
 	transition: 0.2s;
 	opacity:1.0;
-	border-radius: 50%;
+	/*border-radius: 50%;*/
 }
 
 .hero-img:hover {

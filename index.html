@@ -24,7 +24,7 @@ Sort by:
   <select ng-model="searchName" ng-options="cc.name for cc in herosList | filter:query| orderBy:'heros'">
         <option value="">All Heroes</option>
     </select>
-  <select ng-model="searchTeam" ng-options="cc.team for cc in herosList | filter:query | unique:'Team' ">
+  <select ng-model="searchTeam" ng-options="cc.team for cc in herosList |   unique:'team' | filter:query">
         <option value="">All Teams</option>
     </select>
 </div>
