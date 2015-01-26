@@ -80,7 +80,8 @@ li {
 .hero-img:hover {
 	transition: 0.2s ease-in-out;
 	opacity:0.6;
-/*	width: 0%;*/
+	width: 65%;
+	margin: 1em 17.5%;
 }
 
 .search-bar {
