@@ -100,6 +100,7 @@ li {
 	display:inline-block;
 	vertical-align: middle;
 	border-radius: 15px;
+	font-size: 15px;
 }
 
 .icon {
@@ -110,8 +111,10 @@ li {
 	/*float:left;*/
 }
 
-option {
+select {
 	text-align: center;
+	font-size: 15px;
+	font-family: PT Sans;
 }
 
 .top {
