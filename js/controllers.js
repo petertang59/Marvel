@@ -21,7 +21,7 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
       'age':1962,
       'species': 'Asgardian',
       'imageUrl':'img/thor.png',
-      'bgcolor':'#ddc076'
+      'bgcolor':'#192a5b'
      },
 
      {'name': 'Hulk',
