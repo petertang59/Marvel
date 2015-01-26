@@ -12,7 +12,9 @@
 <div class="container">
     <div class="top">
       <!--Sidebar content-->
-   Search: <input ng-model="query">
+      <div class="search-bar">
+   <img class="icon" src="img/icons/search.png"/><input ng-model="query">
+ </div>
   <br>
 Sort by:
 <select ng-model="orderProp">
@@ -35,8 +37,7 @@ Sort by:
     <img class="hero-img" src="{{Hero.imageUrl}}"/>
     <p>{{Hero.age}}
       <br>{{Hero.team}} 
-    <br>
-    {{Hero.species}}</p>
+    <br>{{Hero.species}}</p>
     <!-- <img src="img/ironman.jpg"/> -->
   </li>
 </ul>

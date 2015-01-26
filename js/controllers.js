@@ -4,21 +4,21 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
   $scope.herosList = [
     {'name': 'Iron Man',
       'team': 'Avengers',
-      'age': 1951, 
-      'species': 'Human',
+      'age':1951, 
+      'species':'Human',
        'imageUrl':'img/ironman.png', 
       'bgcolor':'#9e3d3b'},
     
     {'name': 'Captain America',
       'team': 'Avengers',
-      'age': 1939, 
+      'age':1939, 
       'species': 'Genetically Modified Human', 
       'imageUrl':'img/captainamerica.png',
       'bgcolor':'#3c688a'},
     
     {'name': 'Thor',
       'team': 'Avengers', 
-      'age': 1962,
+      'age':1962,
       'species': 'Asgardian',
       'imageUrl':'img/thor.png',
       'bgcolor':'#ddc076'
@@ -26,28 +26,28 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
 
      {'name': 'Hulk',
      'team': 'Avengers',
-     'age': 1962,
+     'age':1962,
      'species': 'Genetically Modified Human',
      'imageUrl':'img/hulk.png',
      'bgcolor':'#48824a'},
 
       {'name': 'Quicksilver',
       'team': 'Avengers',
-      'age': 1964, 
+      'age':1964, 
       'species': 'Mutant',
        'imageUrl':'img/quicksilver.png', 
       'bgcolor':'#9dbace'},
     
     {'name': 'Scarlet Witch',
       'team': 'Avengers',
-      'age': 1964, 
+      'age':1964, 
       'species': 'Mutant', 
       'imageUrl':'img/scarletwitch.png',
       'bgcolor':'#ff523b'},
     
     {'name': 'Black Widow',
       'team': 'S.H.I.E.L.D.', 
-      'age': 1964,
+      'age':1964,
       'species': 'Human',
       'imageUrl':'img/blackwidow.png',
       'bgcolor':'#515151'
@@ -55,7 +55,7 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
 
      {'name': 'Hawkeye',
      'team': 'S.H.I.E.L.D.',
-     'age': 1964,
+     'age':1964,
      'species': 'Human',
      'imageUrl':'img/hawkeye.png',
      'bgcolor':'#5b2424'}
