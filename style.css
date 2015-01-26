@@ -22,7 +22,8 @@ h2, span, p {
 }
 
 p {
-	letter-spacing: 0.1em
+	letter-spacing: 0.1em;
+	margin: 0.2em 0em;
 }
 
 .search-bar {

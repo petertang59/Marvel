@@ -35,9 +35,9 @@ Sort by:
   <li ng-repeat="Hero in herosList | filter:query | orderBy:orderProp | filter: searchName | filter: searchTeam" style="background:{{Hero.bgcolor}};">
     <h2>{{Hero.name}}</h2>
     <img class="hero-img" src="{{Hero.imageUrl}}"/>
-    <p>{{Hero.age}}
-      <br>{{Hero.team}} 
-    <br>{{Hero.species}}</p>
+    <p>{{Hero.age}}</p>
+      <p>{{Hero.team}}</p> 
+    <p>{{Hero.species}}</p>
     <!-- <img src="img/ironman.jpg"/> -->
   </li>
 </ul>
