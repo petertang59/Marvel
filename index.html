@@ -13,7 +13,7 @@
     <div class="top">
       <!--Sidebar content-->
       <div class="search-bar">
-   <img class="icon" src="img/icons/search.png"/><input ng-model="query">
+   <img class="icon" src="img/icons/search.png"/><input class="input" ng-model="query">
  </div>
   <br>
 Sort by:
@@ -23,16 +23,19 @@ Sort by:
   <option value="species">Species</option>
 </select>
  <br>
-  <select ng-model="searchName" ng-options="cc.name for cc in herosList | filter:query| orderBy:'heros'">
-        <option value="">All Heroes</option>
+  <select ng-model="searchSpecies" ng-options="cc.species for cc in herosList | filter:query| orderBy:'heros' | unique: 'team'">
+        <option value="">All Species</option>
     </select>
-  <select ng-model="searchTeam" ng-options="cc.team for cc in herosList |   unique:'team' | filter:query">
-        <option value="">All Teams</option>
+  <select ng-model="searchTeam" ng-options="cc.team for cc in herosList | unique:'team' | filter:query | orderBy:'heros'">
+    <option value="">All Teams</option>
+    </select>
+    <select ng-model="searchTeam" ng-options="cc.team for cc in herosList | unique:'team' | filter:query | orderBy:'heros'">
+    <option value="">All Teams</option>
     </select>
 </div>
 <div class="content">
 <ul class="heroes">
-  <li ng-repeat="Hero in herosList | filter:query | orderBy:orderProp | filter: searchName | filter: searchTeam" style="background:{{Hero.bgcolor}};">
+  <li ng-repeat="Hero in herosList | filter:query | orderBy:orderProp | filter: searchSpecies | filter: searchTeam" style="background:{{Hero.bgcolor}};">
     <h2>{{Hero.name}}</h2>
     <img class="hero-img" src="{{Hero.imageUrl}}"/>
     <p>{{Hero.age}}</p>
