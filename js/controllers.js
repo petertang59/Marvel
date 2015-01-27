@@ -72,7 +72,7 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
      'age':1963,
      'species': 'Human',
      'imageUrl':'img/nickfury.png',
-     'bgcolor':'#00000'}
+     'bgcolor':'#000000'}
   ];
 
   $scope.orderProp = 'age';
