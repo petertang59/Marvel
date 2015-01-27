@@ -3,6 +3,7 @@
   <script src="bower_components/angular/angular.js"></script>
   <script src="js/controllers.js"></script>
   <script src="js/utils/ui-utils.js"></script>
+  <script src="js/unique.js"></script>
   <link rel="stylesheet" href="style.css"/>
   <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,13 +24,13 @@ Sort by:
   <option value="species">Species</option>
 </select>
  <br>
-  <select ng-model="searchSpecies" ng-options="cc.species for cc in herosList | filter:query| orderBy:'heros' | unique: 'team'">
+  <select ng-model="searchSpecies" ng-options="cc.species for cc in herosList | filter:query| orderBy:'heros'">
         <option value="">All Species</option>
     </select>
-  <select ng-model="searchTeam" ng-options="cc.team for cc in herosList | unique:'team' | filter:query | orderBy:'heros'">
+  <select ng-model="searchTeam" ng-options="cc.team for cc in herosList | filter:query | orderBy:'heros'">
     <option value="">All Teams</option>
     </select>
-    <select ng-model="searchTeam" ng-options="cc.team for cc in herosList | unique:'team' | filter:query | orderBy:'heros'">
+    <select ng-model="searchTeam" ng-options="cc.team for cc in herosList | filter:query | orderBy:'heros'">
     <option value="">All Teams</option>
     </select>
 </div>
