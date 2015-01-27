@@ -58,7 +58,7 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
      'age':1964,
      'species': 'Human',
      'imageUrl':'img/hawkeye.png',
-     'bgcolor':'#5b2424'}
+     'bgcolor':'#351840'}
   ];
 
   $scope.orderProp = 'age';
