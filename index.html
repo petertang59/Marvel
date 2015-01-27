@@ -4,6 +4,7 @@
   <script src="js/controllers.js"></script>
   <script src="js/utils/ui-utils.js"></script>
   <script src="js/unique.js"></script>
+  <script src="js/script.js"></script>
   <link rel="stylesheet" href="style.css"/>
   <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,14 +37,17 @@ Sort by:
 </div>
 <div class="content">
 <ul class="heroes">
-  <li ng-repeat="Hero in herosList | filter:query | orderBy:orderProp | filter: searchSpecies | filter: searchTeam" style="background:{{Hero.bgcolor}};">
+  <a id=#showme>
+  <li id='{{Hero.id}}' ng-repeat="Hero in herosList | filter:query | orderBy:orderProp | filter: searchSpecies | filter: searchTeam" style="background:{{Hero.bgcolor}};">
     <h2>{{Hero.name}}</h2>
     <img class="hero-img" src="{{Hero.imageUrl}}"/>
     <p>{{Hero.age}}</p>
-      <p>{{Hero.team}}</p> 
+    <p>{{Hero.team}}</p> 
     <p>{{Hero.species}}</p>
+    <p class="bio">{{Hero.bio}}</p>
     <!-- <img src="img/ironman.jpg"/> -->
   </li>
+</a>
 </ul>
   </div>
 </div>

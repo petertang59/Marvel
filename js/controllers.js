@@ -6,13 +6,15 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
       'team': 'Avengers',
       'age':1951, 
       'species':'Human',
-       'imageUrl':'img/ironman.png', 
-      'bgcolor':'#9e3d3b'},
+      'imageUrl':'img/ironman.png', 
+      'bgcolor':'#9e3d3b',
+      'id':'ironman',
+      'bio':'This dude is Robert Downey Jr. He is s a total badass and makes sick tech.' },
     
     {'name': 'Captain America',
       'team': 'Avengers',
       'age':1939, 
-      'species': 'Genetically Modified Human', 
+      'species': 'Altered Human', 
       'imageUrl':'img/captainamerica.png',
       'bgcolor':'#3c688a'},
     
@@ -27,7 +29,7 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
      {'name': 'Hulk',
      'team': 'Avengers',
      'age':1962,
-     'species': 'Genetically Modified Human',
+     'species': 'Altered Human',
      'imageUrl':'img/hulk.png',
      'bgcolor':'#48824a'},
 
@@ -64,15 +66,37 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
      'team': 'Avengers',
      'age':1962,
      'species': 'Human',
-     'imageUrl':'img/ant-man.png',
-     'bgcolor':'#5b2424'},
+     'imageUrl':'img/antman.png',
+     'bgcolor':'#C90032'},
 
       {'name': 'Nick Fury',
      'team': 'S.H.I.E.L.D.',
      'age':1963,
      'species': 'Human',
      'imageUrl':'img/nickfury.png',
-     'bgcolor':'#000000'}
+     'bgcolor':'#000000'},
+
+      {'name': 'Cyclops',
+     'team': 'X-Men',
+     'age':1963,
+     'species': 'Mutant',
+     'imageUrl':'img/cyclops.png',
+     'bgcolor':'#0062D1'},
+
+     {'name': 'Wolverine',
+     'team': 'X-Men',
+     'age':1974,
+     'species': 'Mutant',
+     'imageUrl':'img/wolverine.png',
+     'bgcolor':'#E0B700'},
+
+      {'name': 'Wolverine',
+     'team': 'X-Men',
+     'age':1974,
+     'species': 'Mutant',
+     'imageUrl':'img/starlord.png',
+     'bgcolor':'#940000'},
+
   ];
 
   $scope.orderProp = 'age';
