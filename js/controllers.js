@@ -65,7 +65,14 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
      'age':1962,
      'species': 'Human',
      'imageUrl':'img/ant-man.png',
-     'bgcolor':'#5b2424'}
+     'bgcolor':'#5b2424'},
+
+      {'name': 'Nick Fury',
+     'team': 'S.H.I.E.L.D.',
+     'age':1963,
+     'species': 'Human',
+     'imageUrl':'img/nickfury.png',
+     'bgcolor':'#00000'}
   ];
 
   $scope.orderProp = 'age';
