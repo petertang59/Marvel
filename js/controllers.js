@@ -1,4 +1,63 @@
-var HeroApp = angular.module('HeroApp', ['ui.unique']);
+angular.module('HelpfulFilters', [])
+
+  // Extracts the key from a list of objects.
+  //
+  // suage:
+  //
+  //     <p>Heroes</p>
+  //     <ul>
+  //       <li ng-repeat="hero in heroes | extractKey:'name'">{{hero}}</li>
+  //     </ul>
+  .filter('extractKey', function () {
+    return function (input, key) {
+      console.log(input, key);
+      return input.map(function (el) {
+        return el[key];
+      });
+    }
+  })
+
+  // Outputs unique elements from the list.
+  //
+  // usage:
+  //
+  //     <select ng-repeat="team in heroes | extractKey:'team' | unique">
+  //       <option>{{team}}</option>
+  //     </select>
+  .filter('unique', function () {
+    return function (input) {
+      console.log(input);
+      var uniques = {};
+      input.forEach(function (el) {
+        uniques[el] = true;
+      });
+      return Object.keys(uniques);
+    }
+  })
+
+  // Filters objects in list by key.
+  //
+  // usage:
+  //
+  //     <p>Heroes</p>
+  //     <ul>
+  //       <li ng-repeat="hero in heroes | conditionalStrictFilterKey:searchTeam:team">
+  //         {{hero.name}} {{hero.team}} {{hero.species}}
+  //       </li>
+  //     </ul>
+  .filter('conditionalStrictFilterKey', function () {
+    return function (input, query, key) {
+      console.log(input, query, key);
+      if (!query) { return input; }
+      return input.filter(function (el) {
+        return el[key] === query;
+      });
+    }
+  });
+
+
+var HeroApp = angular.module('HeroApp', ['HelpfulFilters']);
+
 
 HeroApp.controller('HeroListCtrl', function ($scope) {
   $scope.herosList = [
@@ -90,41 +149,31 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
      'imageUrl':'img/wolverine.png',
      'bgcolor':'#E0B700'},
 
-      {'name': 'Wolverine',
-     'team': 'X-Men',
-     'age':1974,
-     'species': 'Mutant',
+      {'name': 'Star Lord',
+     'team': 'Guardians',
+     'age':1976,
+     'species': 'Half-Alien',
      'imageUrl':'img/starlord.png',
      'bgcolor':'#940000'},
 
+      {'name': 'Professor X',
+     'team': 'X-Men',
+     'age':1963,
+     'species': 'Mutant',
+     'imageUrl':'img/professorx.png',
+     'bgcolor':'#A1A1A1'},
+
+      {'name': 'Jean Grey',
+     'team': 'X-Men',
+     'age':1963,
+     'species': 'Mutant',
+     'imageUrl':'img/jeangrey.png',
+     'bgcolor':'#160070'},
   ];
 
   $scope.orderProp = 'age';
 });
 
-describe('Hero App', function() {
+// angular.module('HelpfulFilters', [])
 
-  describe('Hero list view', function() {
-
-    beforeEach(function() {
-      browser.get('app/index.html');
-    });
-
-
-    it('should filter the Hero list as a user types into the search box', function() {
-
-      var HeroList = element.all(by.repeater('Hero in HerosList'));
-      var query = element(by.model('query'));
-
-      expect(HeroList.count()).toBe(8);
-
-      query.sendKeys('Avengers');
-      expect(HeroList.count()).toBe(8);
-
-      query.clear();
-      query.sendKeys('S.H.I.E.L.D.');
-      expect(HeroList.count()).toBe(8);
-    });
-  });
-});
 
