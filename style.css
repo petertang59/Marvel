@@ -23,11 +23,16 @@ body {
 	position: fixed;
 	height: 100%;
 	transition: 0.5s;
+	top:0px;
 }
 
-.full:hover .bio {
+.full .bio {
 	display: block;
-	animation: 0.5s;
+	/*animation: 0.5s;*/
+}
+
+.full img:hover {
+	opacity: 1.0;
 }
 
 html {

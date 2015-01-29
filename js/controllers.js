@@ -75,7 +75,9 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
       'age':1939, 
       'species': 'Altered Human', 
       'imageUrl':'img/captainamerica.png',
-      'bgcolor':'#3c688a'},
+      'bgcolor':'#3c688a',
+    'bio':'This dude is Chris Evans. He is super buff.'
+  },
     
     {'name': 'Thor',
       'team': 'Avengers', 
