@@ -52,14 +52,13 @@ Sort by:
 </div>
 <div class="content">
   <ul class="heroes">
-  <li id='{{Hero.id}}' ng-repeat="Hero in herosList | filter:query | orderBy:orderProp | conditionalStrictFilterKey:searchTeam:'team' | conditionalStrictFilterKey:searchSpecies:'species' | conditionalStrictFilterKey:searchAge:'age'" style="background:{{Hero.bgcolor}};">
+  <li id='{{Hero.id}}' ng-click="toggle.state = !toggle.state" ng-class="{'full' : toggle.state}" ng-repeat="Hero in herosList | filter:query | orderBy:orderProp | conditionalStrictFilterKey:searchTeam:'team' | conditionalStrictFilterKey:searchSpecies:'species' | conditionalStrictFilterKey:searchAge:'age'" style="background:{{Hero.bgcolor}};">
     <h2>{{Hero.name}}</h2>
     <img class="hero-img" src="{{Hero.imageUrl}}"/>
     <p>{{Hero.age}}</p>
     <p>{{Hero.team}}</p> 
     <p>{{Hero.species}}</p>
     <p class="bio">{{Hero.bio}}</p>
-    <!-- <img src="img/ironman.jpg"/> -->
   </li>
 </a>
 </ul>

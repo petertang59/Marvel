@@ -9,6 +9,25 @@ body {
 
 .content {
 	width: 100%;
+	top: 120px;
+	position: absolute;
+	display: block;
+}
+
+.bio {
+	display:none;
+}
+
+.full {
+	width: 100%;
+	position: fixed;
+	height: 100%;
+	transition: 0.5s;
+}
+
+.full:hover .bio {
+	display: block;
+	animation: 0.5s;
 }
 
 html {
@@ -26,9 +45,7 @@ p {
 	margin: 0.2em 0em;
 }
 
-.bio {
-	display:none;
-}
+
 
 .top p {
 	color: grey;
@@ -68,6 +85,7 @@ li {
 	  -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    transition: 0.5s;
 }
 
 .hero-img {
@@ -82,8 +100,8 @@ li {
 .hero-img:hover {
 	transition: 0.2s ease-in-out;
 	opacity:0.6;
-	width: 65%;
-	margin: 1em 17.5%;
+	/*width: 65%;
+	margin: 1em 17.5%;*/
 }
 
 .search-bar {
@@ -123,6 +141,8 @@ select {
 	text-align: center;
 	display:block;
 	margin: 1em auto;
+	position: fixed;
+	width: 100%;
 }
 
 @media only screen and (min-width: 768px) {

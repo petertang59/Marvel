@@ -174,6 +174,5 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
   $scope.orderProp = 'age';
 });
 
-// angular.module('HelpfulFilters', [])
-
+$scope.toggles = [{ state: true }, { state: false }, { state: true }];
 
