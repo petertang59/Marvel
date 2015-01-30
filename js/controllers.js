@@ -177,7 +177,7 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
      'age':1962,
      'species': 'Altered Human',
      'imageUrl':'img/spiderman.png',
-     'bgcolor':'#160070'},
+     'bgcolor':'#346191'},
 
      {'name': 'Falcon',
      'team': 'Avengers',
@@ -198,7 +198,42 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
      'age':1961,
      'species': 'Altered Human',
      'imageUrl':'img/mrfantastic.png',
-     'bgcolor':'#160070'},
+     'bgcolor':'#005FC4'},
+
+     {'name': 'Invisible Woman',
+     'team': 'Fantastic Four',
+     'age':1961,
+     'species': 'Altered Human',
+     'imageUrl':'img/invisiblewoman.png',
+     'bgcolor':'#4787CC'},
+
+      {'name': 'The Thing',
+     'team': 'Fantastic Four',
+     'age':1961,
+     'species': 'Altered Human',
+     'imageUrl':'img/thething.png',
+     'bgcolor':'#BA6A30'},
+
+      {'name': 'Groot',
+     'team': 'Guardians',
+     'age':1960,
+     'species': 'Alien',
+     'imageUrl':'img/Groot.png',
+     'bgcolor':'#5C4A3D'},
+
+      {'name': 'Rocket Raccoon',
+     'team': 'Guardians',
+     'age':1976,
+     'species': 'Alien',
+     'imageUrl':'img/rocketraccoon.png',
+     'bgcolor':'#545454'},
+
+       {'name': 'Storm',
+     'team': 'X-Men',
+     'age':1975,
+     'species': 'Mutant',
+     'imageUrl':'img/storm.png',
+     'bgcolor':'#00204D'},
   ];
 
   $scope.orderProp = 'age';
