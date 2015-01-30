@@ -173,10 +173,31 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
      'bgcolor':'#160070'},
 
        {'name': 'Spiderman',
-     'team': '',
+     'team': 'None',
      'age':1962,
      'species': 'Altered Human',
      'imageUrl':'img/spiderman.png',
+     'bgcolor':'#160070'},
+
+     {'name': 'Falcon',
+     'team': 'Avengers',
+     'age':1969,
+     'species': 'Human',
+     'imageUrl':'img/falcon.png',
+     'bgcolor':'#D60000'},
+
+       {'name': 'Human Torch',
+     'team': 'Fantastic Four',
+     'age':1961,
+     'species': 'Altered Human',
+     'imageUrl':'img/humantorch.png',
+     'bgcolor':'#D64700'},
+
+      {'name': 'Mr Fantastic',
+     'team': 'Fantastic Four',
+     'age':1961,
+     'species': 'Altered Human',
+     'imageUrl':'img/mrfantastic.png',
      'bgcolor':'#160070'},
   ];
 
