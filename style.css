@@ -34,6 +34,7 @@ body {
 -ms-transform: translate(0px,0px); /* IE 9 */
    	-webkit-transform: translate(0px,0px); /* Chrome, Safari, Opera */
     transform: translate(0px,0px);
+    transition: 0.2s;
 }
 
 .full .bio {
