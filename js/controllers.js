@@ -171,6 +171,13 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
      'species': 'Mutant',
      'imageUrl':'img/jeangrey.png',
      'bgcolor':'#160070'},
+
+       {'name': 'Spiderman',
+     'team': '',
+     'age':1962,
+     'species': 'Altered Human',
+     'imageUrl':'img/spiderman.png',
+     'bgcolor':'#160070'},
   ];
 
   $scope.orderProp = 'age';
