@@ -9,7 +9,7 @@ body {
 
 .content {
 	width: 100%;
-	top: 120px;
+	top: 180px;
 	position: absolute;
 	display: block;
 }
@@ -145,9 +145,13 @@ select {
 .top {
 	text-align: center;
 	display:block;
-	margin: 1em auto;
+	margin: auto;
 	position: fixed;
+	padding: 50px auto;
 	width: 100%;
+	background-image: url(img/marvel-bg.png);
+	background-position: center;
+	height: 180px;
 }
 
 @media only screen and (min-width: 768px) {

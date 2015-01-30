@@ -218,7 +218,7 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
      'team': 'Guardians',
      'age':1960,
      'species': 'Alien',
-     'imageUrl':'img/Groot.png',
+     'imageUrl':'img/groot.png',
      'bgcolor':'#5C4A3D'},
 
       {'name': 'Rocket Raccoon',
