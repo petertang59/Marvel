@@ -16,6 +16,10 @@ body {
 
 .bio {
 	display:none;
+	text-align: center;
+	width: 90%;
+	margin: auto 5%;
+	margin-top: 1em;
 }
 
 .full {
@@ -26,6 +30,12 @@ body {
 	top:0px;
 }
 
+.full:hover  img{
+-ms-transform: translate(0px,0px); /* IE 9 */
+   	-webkit-transform: translate(0px,0px); /* Chrome, Safari, Opera */
+    transform: translate(0px,0px);
+}
+
 .full .bio {
 	display: block;
 	/*animation: 0.5s;*/
@@ -33,6 +43,8 @@ body {
 
 .full img:hover {
 	opacity: 1.0;
+	
+
 }
 
 html {
@@ -53,8 +65,8 @@ p {
 
 
 .top p {
-	color: grey;
-	float: left;
+	color: white;
+	float: none;
 }
 
 a {
@@ -102,9 +114,12 @@ li {
 	/*border-radius: 50%;*/
 }
 
-.hero-img:hover {
+li:hover .hero-img {
 	transition: 0.2s ease-in-out;
 	opacity:0.6;
+	 -ms-transform: translate(0px,-10px); /* IE 9 */
+   	-webkit-transform: translate(0px,-10px); /* Chrome, Safari, Opera */
+    transform: translate(0px,-10px);
 	/*width: 65%;
 	margin: 1em 17.5%;*/
 }
@@ -138,8 +153,12 @@ li {
 
 select {
 	text-align: center;
-	font-size: 15px;
-	font-family: PT Sans;
+font-size: 12px;
+font-family: PT Sans;
+height: 2em;
+background-color: white;
+border: none;
+margin:0.5em;
 }
 
 .top {
@@ -150,7 +169,7 @@ select {
 	padding: 50px auto;
 	width: 100%;
 	background-image: url(img/marvel-bg.png);
-	background-position: center;
+	background-position: 50% 0px	;
 	height: 180px;
 }
 

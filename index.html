@@ -20,11 +20,9 @@
           function parallaxScroll(){
             var scrolledY = $(window).scrollTop();
           $('.top').css('background-position','center -'+((scrolledY*0.5))+'px');
-          }
-
-          
+          }   
       });
-    </script>
+  </script>
 
   <link rel="stylesheet" href="style.css"/>
   <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -39,7 +37,7 @@
    <img class="icon" src="img/icons/search.png"/><input class="input" ng-model="query">
  </div>
   <br>
-Sort by:
+<p>Sort by:</p>
 <select ng-model="orderProp">
   <option value="name">Alphabetical</option>
   <option value="age">First Appearance</option>
