@@ -22,6 +22,8 @@ body {
 	width: 90%;
 	margin: auto 5%;
 	margin-top: 1em;
+	font-size: 11px;
+	line-height: 2em;
 }
 
 .full {
