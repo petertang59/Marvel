@@ -187,7 +187,7 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
      'species': 'Human',
      'imageUrl':'img/falcon.png',
      'bgcolor':'#D60000',
-      'bio':'Sam Wilson, aka Falcon is a mundane criminal until he met the machiavellian Red Skull that confered him the ability to communicate telepathically with his own falcon, Red Wing.'},
+      'bio':'Sam Wilson, aka Falcon was a mundane criminal until he met the machiavellian Red Skull that confered him the ability to communicate telepathically with his own falcon, Red Wing. Red Skull ordered him to ally with Captain America but the plan failed. Indeed, heroic nature of Sam surfaced and he became a righter'},
 
        {'name': 'Human Torch',
      'team': 'Fantastic Four',
@@ -222,7 +222,7 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
      'age':1960,
      'species': 'Alien',
      'imageUrl':'img/groot.png',
-     'bgcolor':'#5C4A3D'},
+     'bgcolor':'#52392C'},
 
       {'name': 'Rocket Raccoon',
      'team': 'Guardians',

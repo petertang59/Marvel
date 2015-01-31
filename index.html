@@ -19,13 +19,14 @@
           
           function parallaxScroll(){
             var scrolledY = $(window).scrollTop();
-          $('.top').css('background-position','center -'+((scrolledY*0.5))+'px');
+          $('.top').css('background-position','center -'+((scrolledY*0.8))+'px');
           }   
       });
   </script>
 
   <link rel="stylesheet" href="style.css"/>
   <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body ng-controller="HeroListCtrl">
