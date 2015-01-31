@@ -12,6 +12,8 @@ body {
 	top: 200px;
 	position: absolute;
 	display: block;
+	background-image: url(img/marvel-bg.png);
+	background-position: 50% 0px;
 }
 
 .bio {
@@ -24,8 +26,8 @@ body {
 
 .full {
 	width: 100%;
-	position: absolute;
-	/*height: 100%;*/
+	position: fixed;
+	height: 100%;
 	transition: 0.5s;
 	top:0px;
 }

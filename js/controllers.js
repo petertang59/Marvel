@@ -68,7 +68,7 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
       'imageUrl':'img/ironman.png', 
       'bgcolor':'#9e3d3b',
       'id':'ironman',
-      'bio':'An American billionaire playboy, industrialist, and ingenious engineer, Tony Stark suffers a severe chest injury during a kidnapping in which his captors attempt to force him to build a weapon of mass destruction. He instead creates a powered suit of armor to save his life and escape captivity. An American billionaire playboy, industrialist, and ingenious engineer, Tony Stark suffers a severe chest injury during a kidnapping in which his captors attempt to force him to build a weapon of mass destruction. He instead creates a powered suit of armor to save his life and escape captivity. An American billionaire playboy, industrialist, and ingenious engineer, Tony Stark suffers a severe chest injury during a kidnapping in which his captors attempt to force him to build a weapon of mass destruction. He instead creates a powered suit of armor to save his life and escape captivity.' },
+      'bio':'An American billionaire playboy, industrialist, and ingenious engineer, Tony Stark suffers a severe chest injury during a kidnapping in which his captors attempt to force him to build a weapon of mass destruction. He instead creates a powered suit of armor to save his life and escape captivity.' },
     
     {'name': 'Captain America',
       'team': 'Avengers',
@@ -76,7 +76,7 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
       'species': 'Altered Human', 
       'imageUrl':'img/captainamerica.png',
       'bgcolor':'#3c688a',
-    'bio':'This dude is Chris Evans. He is super buff.'
+    'bio':'Steve Rogers is deemed unfit to fight in the Second World War because of his lack of physical capabilities. He agrees to participate in a top secret experiment and emerges transformed into super soldier. He fought alongside the army until the last day of the war, when he is found frozen by accident.'
   },
     
     {'name': 'Thor',
