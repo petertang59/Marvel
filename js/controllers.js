@@ -158,7 +158,8 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
      'age':1974,
      'species': 'Mutant',
      'imageUrl':'img/wolverine.png',
-     'bgcolor':'#E0B700'},
+     'bgcolor':'#E0B700',
+     'bio':'Wolverine is a member of the X-Men, a team of superheroes who fight for mutant rights and to preserve the peace between mutants and normal humans. He can fully and rapidly recover from any physical injury or ailment. He possesses long retractable claws which protrude from the backs of his hands. His skeleton was surgically laced with a fictional metal, known as adamantium, which makes it virtually indestructible.'},
 
       {'name': 'Star Lord',
      'team': 'Guardians',
