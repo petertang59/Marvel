@@ -68,7 +68,7 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
       'imageUrl':'img/ironman.png', 
       'bgcolor':'#9e3d3b',
       'id':'ironman',
-      'bio':'An American billionaire playboy, industrialist, and ingenious engineer, Tony Stark suffers a severe chest injury during a kidnapping in which his captors attempt to force him to build a weapon of mass destruction. He instead creates a powered suit of armor to save his life and escape captivity. Later, Stark augments his suit with weapons and other technological devices he designed through his company, Stark Industries. He uses the suit and successive versions to protect the world as Iron Man, while concealing his true identity. ' },
+      'bio':'An American billionaire playboy, industrialist, and ingenious engineer, Tony Stark suffers a severe chest injury during a kidnapping in which his captors attempt to force him to build a weapon of mass destruction. He instead creates a powered suit of armor to save his life and escape captivity.' },
     
     {'name': 'Captain America',
       'team': 'Avengers',
