@@ -22,8 +22,8 @@ body {
 	width: 90%;
 	margin: auto 5%;
 	margin-top: 1em;
-	font-size: 11px;
-	line-height: 2em;
+	font-size: 12px;
+	line-height: 1.5em;
 }
 
 .full {
@@ -32,6 +32,7 @@ body {
 	height: 100%;
 	transition: 0.5s;
 	top:0px;
+	transform-origin: 50%;
 }
 
 .full:hover  img{
@@ -54,11 +55,11 @@ body {
 }
 
 html {
-	font-family: PT Sans;
+	font-family: Open Sans;
 }
 
 h2, span, p {
-	font-family: PT Sans;
+	font-family: Open Sans;
 	color: white;
 	/*font-weight:bold;*/
 }
@@ -141,7 +142,7 @@ li:hover .hero-img {
 }
 
 .input {
-	font-family: PT Sans;
+	font-family: Open Sans;
 	text-align: center;
 	height: 30px;
 	background: #e6e7e8;
@@ -165,7 +166,7 @@ li:hover .hero-img {
 select {
 	text-align: center;
 font-size: 12px;
-font-family: PT Sans;
+font-family: Open Sans;
 height: 2em;
 background-color: white;
 border: none;
