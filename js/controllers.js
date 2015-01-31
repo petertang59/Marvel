@@ -84,7 +84,8 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
       'age':1962,
       'species': 'Asgardian',
       'imageUrl':'img/thor.png',
-      'bgcolor':'#192a5b'
+      'bgcolor':'#192a5b',
+      'bio':'Thor is the Norse god of Thunder. When his father Odin decided that Thor became too proud, he was exiled to Earth as the identity of Dr. Donald Blake. But Blake has found a stick and he has clothed his divine status, the stick becomes his hammer, Mjolnir. '
      },
 
      {'name': 'Hulk',
