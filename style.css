@@ -39,6 +39,7 @@ body {
    	-webkit-transform: translate(0px,0px); /* Chrome, Safari, Opera */
     transform: translate(0px,0px);
     transition: 0.2s;
+    opacity: 1.0;
 }
 
 .full .bio {
@@ -127,6 +128,10 @@ li:hover .hero-img {
     transform: translate(0px,-10px);
 	/*width: 65%;
 	margin: 1em 17.5%;*/
+}
+
+.full:hover .hero-img {
+	opacity:1.0;
 }
 
 .search-bar {

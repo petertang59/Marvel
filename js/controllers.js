@@ -85,7 +85,7 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
       'species': 'Asgardian',
       'imageUrl':'img/thor.png',
       'bgcolor':'#192a5b',
-      'bio':'Thor is the Norse god of Thunder. When his father Odin decided that Thor became too proud, he was exiled to Earth as the identity of Dr. Donald Blake. But Blake has found a stick and he has clothed his divine status, the stick becomes his hammer, Mjolnir. '
+      'bio':'Thor is the Norse god of Thunder. When his father Odin decided that Thor became too proud, he was exiled to Earth as the identity of Dr. Donald Blake. But Blake has found a stick and he has clothed his divine status, the stick becomes his hammer, Mjolnir.'
      },
 
      {'name': 'Hulk',
@@ -178,14 +178,16 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
      'age':1962,
      'species': 'Altered Human',
      'imageUrl':'img/spiderman.png',
-     'bgcolor':'#346191'},
+     'bgcolor':'#346191',
+      'bio':'The bite of an irradiated spider granted high-school student Peter Parker incredible powers. First he used his powers to became famous. But when its acts lead to the Death of his Uncle Ben, Peter vowed to use those abilities to protect his fellow man. Driven by the words of his uncle: With great power comes great responsibility!'},
 
      {'name': 'Falcon',
      'team': 'Avengers',
      'age':1969,
      'species': 'Human',
      'imageUrl':'img/falcon.png',
-     'bgcolor':'#D60000'},
+     'bgcolor':'#D60000',
+      'bio':'Sam Wilson, aka Falcon is a mundane criminal until he met the machiavellian Red Skull that confered him the ability to communicate telepathically with his own falcon, Red Wing.'},
 
        {'name': 'Human Torch',
      'team': 'Fantastic Four',
