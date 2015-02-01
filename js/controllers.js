@@ -230,7 +230,8 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
      'age':1961,
      'species': 'Altered Human',
      'imageUrl':'img/thething.png',
-     'bgcolor':'#BA6A30'},
+     'bgcolor':'#BA6A30',
+      'bio':"Ben Grimm is the original, tough-guy of the Marvel Universe. Ben was an ace test-pilot until exposure to intense cosmic radiation mutated him into a rock-skinned monster with immense superhuman strength. Ben's exterior is much harder than stone and he has a gruff disposition, but inside he has a heart of gold."},
 
       {'name': 'Groot',
      'team': 'Guardians',
@@ -253,7 +254,8 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
      'age':1975,
      'species': 'Mutant',
      'imageUrl':'img/storm.png',
-     'bgcolor':'#00204D'},
+     'bgcolor':'#00204D',
+      'bio': "Ororo journeyed alone across the Sahara Desert and finally reached her ancestors' homeland, the Serengeti Plain. By this time her mutant power to control the weather had emerged, and she used them to help the local tribes. Ororo remained with the tribes for years until Professor Charles Xavier recruited her into the new team of X-Men he was assembling. She was given the codename 'Storm' after her power to affect the weather"},
   ];
 
   $scope.orderProp = 'age';
