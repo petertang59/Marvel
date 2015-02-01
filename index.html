@@ -35,7 +35,7 @@
     <div class="top">
       <!--Sidebar content-->
       <div class="search-bar">
-   <img class="icon" src="img/icons/search1.png"/><input class="input" ng-model="query">
+   <img class="icon" src="img/icons/search1.png"/><input class="input" placeholder="Need a hero?" ng-model="query">
  </div>
   <br>
 <p>Sort by:</p>
@@ -67,7 +67,11 @@
 </div>
 <div class="content">
   <ul class="heroes">
-  <li id='{{Hero.id}}' ng-click="toggle.state = !toggle.state" ng-class="{'full' : toggle.state}" ng-repeat="Hero in herosList | filter:query | orderBy:orderProp | conditionalStrictFilterKey:searchTeam:'team' | conditionalStrictFilterKey:searchSpecies:'species' | conditionalStrictFilterKey:searchAge:'age'" style="background:{{Hero.bgcolor}};">
+  <li class="list" id='{{Hero.id}}' ng-click="toggle.state = !toggle.state" ng-class="{'full' : toggle.state}" ng-repeat="Hero in herosList | filter:query | orderBy:orderProp | conditionalStrictFilterKey:searchTeam:'team' | conditionalStrictFilterKey:searchSpecies:'species' | conditionalStrictFilterKey:searchAge:'age'" style="background:{{Hero.bgcolor}};">
+    <a id="exit-box" href="" ng-click="$(.list)toggle.state = !toggle.state" ng-class="{$(.list)'full' : toggle.state}">
+    <div id="exit1"></div>
+    <div id="exit2"></div>
+  </a>
     <h2>{{Hero.name}}</h2>
     <img class="hero-img" src="{{Hero.imageUrl}}"/>
     <p>{{Hero.age}}</p>
