@@ -24,18 +24,40 @@
       });
   </script>
 
+<script>
+// $(window).scroll(function() {    
+//     var scroll = $(window).scrollTop();
+
+//     if (scroll >= 30) {
+//         $("#top-content").addClass("scrollTop");
+//         $(".content").addClass("content-scroll");
+//     }
+// });
+
+// $(window).scroll(function() {    
+//     var scroll = $(window).scrollTop();
+
+//     if (scroll >= 30) {
+//         $(".top").addClass("scrollTop");
+//     } else {
+//         $(".top").removeClass("scrollTop");
+//     }
+// });
+</script>
+
   <link rel="stylesheet" href="style.css"/>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,300' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body ng-controller="HeroListCtrl">
-
 <div class="container">
     <div class="top">
+      <!-- <div id="sandwich-menu"><img id="sandwich-icon" src="img/icons/sandwich.png"</div> -->
+      <div id="top-content">
       <!--Sidebar content-->
       <div class="search-bar">
-   <img class="icon" src="img/icons/search1.png"/><input class="input" placeholder="Need a hero?" ng-model="query">
+   <img id="search-icon" src="img/icons/search1.png"/><input class="input" placeholder="Need a hero?" ng-model="query">
  </div>
   <br>
 <p>Sort by:</p>
@@ -64,11 +86,12 @@
     <select ng-model="searchTeam" ng-options="cc.team for cc in herosList | filter:query | orderBy:'heros'">
     <option value="">All Teams</option>
     </select> -->
+  </div>
 </div>
 <div class="content">
   <ul class="heroes">
   <li class="list" id='{{Hero.id}}' ng-click="toggle.state = !toggle.state" ng-class="{'full' : toggle.state}" ng-repeat="Hero in herosList | filter:query | orderBy:orderProp | conditionalStrictFilterKey:searchTeam:'team' | conditionalStrictFilterKey:searchSpecies:'species' | conditionalStrictFilterKey:searchAge:'age'" style="background:{{Hero.bgcolor}};">
-    <a id="exit-box" href="" ng-click="$(.list)toggle.state = !toggle.state" ng-class="{$(.list)'full' : toggle.state}">
+    <a id="exit-box" href="" ng-click="$(.list)toggle.state = $(.list)!toggle.state" ng-class="{'full' : toggle.state}">
     <div id="exit1"></div>
     <div id="exit2"></div>
   </a>

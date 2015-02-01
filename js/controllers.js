@@ -258,7 +258,7 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
       'bio': "Ororo journeyed alone across the Sahara Desert and finally reached her ancestors' homeland, the Serengeti Plain. By this time her mutant power to control the weather had emerged, and she used them to help the local tribes. Ororo remained with the tribes for years until Professor Charles Xavier recruited her into the new team of X-Men he was assembling. She was given the codename 'Storm' after her power to affect the weather"},
   ];
 
-  $scope.orderProp = 'age';
+  $scope.orderProp = 'name';
 });
 
 $scope.toggles = [{ state: true }, { state: false }, { state: true }];

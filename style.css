@@ -12,9 +12,16 @@ body {
 
 .content {
 	width: 100%;
-	top: 200px;
+	/*top: 170px;*/
 	position: absolute;
 	display: block;
+	/*margin-top: 80px;*/
+	transition: 0.5s;
+}
+
+.content-scroll {
+	margin-top: 80px;
+	transition: 0.5s;
 }
 
 .bio {
@@ -34,6 +41,7 @@ body {
 	transition: 0.5s;
 	top:0px;
 	transform-origin: 50%;
+	z-index: 4;
 }
 
 .full:hover  img{
@@ -135,6 +143,8 @@ li:hover .hero-img {
 
 .full:hover .hero-img {
 	opacity:1.0;
+	max-height: 150px;
+	max-width: 150px;
 }
 
 .search-bar {
@@ -162,11 +172,22 @@ li:hover .hero-img {
 	transition: 0.2s;
 }
 
-.icon {
+#search-icon {
 	width: 20px;
 	margin: 5px;
 	display:inline-block;
 	vertical-align: middle;
+	/*float:left;*/
+}
+
+#sandwich-icon {
+	width: 30px;
+	margin: 5px;
+	display:inline-block;
+	vertical-align: middle;
+	position: fixed;
+	float:right;
+	right: 10px;
 	/*float:left;*/
 }
 
@@ -184,12 +205,39 @@ margin:0.5em;
 	text-align: center;
 	display:block;
 	margin: auto;
-	position: fixed;
+	position: relative;
 	padding: 50px auto;
 	width: 100%;
 	background-image: url(img/marvel-bg.png);
 	background-position: 50% 0px	;
-	height: 200px;
+	/*height: 170px;*/
+	/*overflow: hidden;*/
+	z-index: 3;
+	transition: 0.5s;
+}
+
+.scrollTop {
+	text-align: center;
+	display:block;
+	margin: auto;
+	position: fixed;
+	padding: 50px auto;
+	width: 100%;
+	background-image: url(img/marvel-bg.png);
+	/*background:black;*/
+	background-position: 50% 0px	;
+	height: 50px;
+	/*overflow: hidden;*/
+	transition: 0.5s;
+	z-index:3333;
+}
+#top-content {
+	display: block;
+	padding:1em 0;
+}
+
+.scrollTop #top-content {
+	display:none;
 }
 
 .full #exit1, .full #exit2 {
@@ -206,6 +254,7 @@ z-index: 3333;
 position: fixed;
 left: 20px;
 text-align: left;
+margin-top: 10px;
 }
 
 #exit1 {
