@@ -1,7 +1,6 @@
 body {
 	width: 100%;
 	margin:0;
-
 	background-image: url(img/marvel-bg.png);
 	background-position: 50% 0px;
 }
@@ -30,8 +29,9 @@ body {
 	width: 90%;
 	margin: auto 5%;
 	margin-top: 1em;
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 1.5em;
+	font-weight: normal;
 }
 
 .full {
@@ -70,7 +70,7 @@ html {
 h2, span, p {
 	font-family: Open Sans;
 	color: white;
-	/*font-weight:bold;*/
+	/*font-weight: 700;*/
 }
 
 p {
@@ -155,8 +155,6 @@ li:hover .hero-img {
 }
 
 .input:hover {
-	width: 50%;
-	transition: 0.2s;
 }
 
 .input {
@@ -171,7 +169,6 @@ li:hover .hero-img {
 	vertical-align: middle;
 	border-radius: 15px;
 	font-size: 12px;
-	transition: 0.2s;
 }
 
 #search-icon {
