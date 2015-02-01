@@ -76,7 +76,7 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
       'species': 'Altered Human', 
       'imageUrl':'img/captainamerica.png',
       'bgcolor':'#3c688a',
-    'bio':'Steve Rogers is deemed unfit to fight in the Second World War because of his lack of physical capabilities. He agrees to participate in a top secret experiment and emerges transformed into super soldier. He fought alongside the army until the last day of the war, when he is found frozen by accident.'
+      'bio':'Steve Rogers is deemed unfit to fight in the Second World War because of his lack of physical capabilities. He agrees to participate in a top secret experiment and emerges transformed into super soldier. He fought alongside the army until the last day of the war, when he is found frozen by accident.'
   },
     
     {'name': 'Thor',
@@ -166,7 +166,8 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
      'age':1976,
      'species': 'Half-Alien',
      'imageUrl':'img/starlord.png',
-     'bgcolor':'#940000'},
+     'bgcolor':'#940000',
+      'bio':'Peter Quill is a half-human who was abducted by the Ravagers, an interstellar group of thieves. After his abduction, he was adopted by the Ravagers, building a name for himself as a legendary outlaw. He eventually became the leader of the Guardians of the Galaxy.'},
 
       {'name': 'Professor X',
      'team': 'X-Men',
