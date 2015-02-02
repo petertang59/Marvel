@@ -11,10 +11,8 @@ body {
 
 .content {
 	width: 100%;
-	/*top: 170px;*/
 	position: absolute;
 	display: block;
-	/*margin-top: 80px;*/
 	transition: 0.5s;
 }
 
@@ -38,13 +36,17 @@ body {
 }
 
 .full {
-	width: 100%;
-	position: fixed;
-	height: 100%;
-	transition: 0.5s;
-	top:0px;
-	transform-origin: 50%;
-	z-index: 4;
+width: 100%;
+position: fixed;
+height: 100%;
+transition: 0.5s;
+top: 0px;
+transform-origin: 50%;
+z-index: 4;
+background-image: url(img/ironman-comic.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
 }
 
 .full:hover  img{
@@ -57,13 +59,18 @@ body {
 
 .full .bio {
 	display: block;
-	/*animation: 0.5s;*/
+	transition: 0.5s;
 }
 
 .full img:hover {
 	opacity: 1.0;
-	
+}
 
+.full h2 {
+	font-size: 18px;
+	float: none;
+	transition: 0.8s;
+	margin: auto;
 }
 
 html {
@@ -86,6 +93,8 @@ p {
 .top p {
 	color: white;
 	float: none;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 
 a {
@@ -144,14 +153,13 @@ li:hover .hero-img {
 	 -ms-transform: translate(0px,-5px); /* IE 9 */
    	-webkit-transform: translate(0px,-5px); /* Chrome, Safari, Opera */
     transform: translate(0px,-5px);
-	/*width: 65%;
-	margin: 1em 17.5%;*/
 }
 
 .full:hover .hero-img {
 	opacity:1.0;
 	max-height: 150px;
 	max-width: 150px;
+	transform: translate(0px,0px);
 }
 
 .search-bar {
@@ -259,52 +267,73 @@ margin:0.5em;
 
 #exit-box {
 float: left;
-width: 25px;
-height: 25px;
+width: 50px;
+height: 50px;
 z-index: 3333;
 position: fixed;
 left: 20px;
 text-align: left;
 margin-top: 10px;
+background: none;
 }
 
 #exit1 {
-height: 25px;
-width: 3px;
-margin-left: 12px;
+height: 30px;
+width: 5px;
+margin-left: 27px;
 background-color: white;
 transform: rotate(45deg);
 -ms-transform: rotate(45deg);
 -webkit-transform: rotate(45deg);
 Z-index: 1;
-/* display: none; */
-position:fixed;
-/*display: none;*/
+position: fixed;
 opacity: 0;
 transition: 0.8s;
+margin-top: 12px;
 }
 
 #exit2
 {
-height: 25px;
-width: 3px;
+height: 30px;
+width: 5px;
 background-color: white;
 transform: rotate(90deg);
 -ms-transform: rotate(90deg);
 -webkit-transform: rotate(-45deg);
 Z-index: 2;
 /* display: none; */
-margin-left: 12px;
-position:fixed;
-/*display:none;*/
+margin-left: 27px;
+position: fixed;
+/* display: none; */
 opacity: 0;
 transition: 0.8s;
+margin-top: 12px;
+}
+
+#exit-top-bg {
+width: 100%;
+height: 100%;
+background: white;
+margin-left: 5px;
+margin-top: 2px;
+opacity:0;
+transition: 0.8s;
+}
+
+.full #exit-top-bg {
+	opacity: 0.5;
+	transition: 0.8s;
+	width: 100%;
+	height: 100%;
+	background: white;
+	margin-left: 5px;
+	margin-top: 2px;
 }
 
 #back-top a {
 float: right;
-width: 25px;
-height: 25px;
+width: 50px;
+height: 50px;
 z-index: 3333;
 position: fixed;
 right: 20px;
@@ -316,15 +345,15 @@ margin-top: 10px;
 width: 100%;
 height: 100%;
 background: white;
-margin-left: 5px;
+margin-left: 6px;
 margin-top: 2px;
-opacity:0.5;
+opacity: 0.5;
 }
 
 #top-arrow1 {
-height: 13px;
-width: 3px;
-margin-left: 12px;
+height: 22px;
+width: 5px;
+margin-left: 22px;
 background-color: white;
 transform: rotate(45deg);
 -ms-transform: rotate(45deg);
@@ -332,22 +361,22 @@ transform: rotate(45deg);
 Z-index: 33333;
 position: fixed;
 transition: 0.2s;
-margin-top: 8px;
+margin-top: 15px;
 }
 
 #top-arrow2
 {
-height: 13px;
-width: 3px;
+height: 22px;
+width: 5px;
 background-color: white;
 transform: rotate(90deg);
 -ms-transform: rotate(90deg);
 -webkit-transform: rotate(-45deg);
 Z-index: 33333;
-margin-left: 20px;
+margin-left: 35px;
 position: fixed;
 transition: 0.2s;
-margin-top: 8px;
+margin-top: 15px;
 }
 
 @media only screen and (min-width: 768px) {
