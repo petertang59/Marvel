@@ -31,18 +31,40 @@
 //     if (scroll >= 30) {
 //         $("#top-content").addClass("scrollTop");
 //         $(".content").addClass("content-scroll");
-//     }
-// });
-
-// $(window).scroll(function() {    
-//     var scroll = $(window).scrollTop();
-
-//     if (scroll >= 30) {
-//         $(".top").addClass("scrollTop");
+//         $("#sandwich-icon").addClass("visible");
 //     } else {
-//         $(".top").removeClass("scrollTop");
+//         $("#top-content").removeClass("scrollTop");
+//         $("#sandwich-icon").removeClass("visible");
+//          $(".content").removeClass("content-scroll");
 //     }
 // });
+
+
+$(document).ready(function(){
+
+  // hide #back-top first
+  $("#back-top").hide();
+  
+  // fade in #back-top
+  $(function () {
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 100) {
+        $('#back-top').fadeIn();
+      } else {
+        $('#back-top').fadeOut();
+      }
+    });
+
+    // scroll body to 0px on click
+    $('#back-top a').click(function () {
+      $('body,html').animate({
+        scrollTop: 0
+      }, 800);
+      return false;
+    });
+  });
+
+});
 </script>
 
   <link rel="stylesheet" href="style.css"/>
@@ -53,7 +75,14 @@
 <body ng-controller="HeroListCtrl">
 <div class="container">
     <div class="top">
-      <!-- <div id="sandwich-menu"><img id="sandwich-icon" src="img/icons/sandwich.png"</div> -->
+      
+      <div id="back-top">
+        <a href="#top">
+          <div id="top-arrow1"></div>
+          <div id="top-arrow2"></div>
+        </a>
+      </div>
+
       <div id="top-content">
       <!--Sidebar content-->
       <div class="search-bar">
@@ -98,7 +127,7 @@
     <h2>{{Hero.name}}</h2>
     <img class="hero-img" src="{{Hero.imageUrl}}"/>
     <p>{{Hero.age}}</p>
-    <p>{{Hero.team}}</p> 
+    <p>{{Hero.team}}</p>
     <p>{{Hero.species}}</p>
     <p class="bio">{{Hero.bio}}</p>
   </li>

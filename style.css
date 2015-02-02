@@ -19,8 +19,11 @@ body {
 }
 
 .content-scroll {
-	margin-top: 80px;
 	transition: 0.5s;
+}
+
+.content-scroll ul {
+	margin-top: 50px;
 }
 
 .bio {
@@ -106,6 +109,8 @@ ul {
 	margin:0;
 }
 
+
+
 li {
 	list-style-type: none;
 	font-family: Georgia;
@@ -180,14 +185,17 @@ li:hover .hero-img {
 }
 
 #sandwich-icon {
-	width: 30px;
-	margin: 5px;
-	display:inline-block;
-	vertical-align: middle;
-	position: fixed;
-	float:right;
-	right: 10px;
-	/*float:left;*/
+	width: 35px;
+margin: 8px;
+vertical-align: middle;
+position: fixed;
+float: right;
+right: 4px;
+}
+
+.visible {
+	display: inline-block;
+	z-index: 5;
 }
 
 select {
@@ -222,17 +230,21 @@ margin:0.5em;
 	position: fixed;
 	padding: 50px auto;
 	width: 100%;
-	background-image: url(img/marvel-bg.png);
-	/*background:black;*/
+	/*background-image: url(img/marvel-bg.png);*/
+	background:black;
 	background-position: 50% 0px	;
 	height: 50px;
 	/*overflow: hidden;*/
 	transition: 0.5s;
-	z-index:3333;
+	z-index:4;
 }
+.scrollTop .search-bar, .scrollTop select, .scrollTop p {
+	display: none;
+}
+
 #top-content {
 	display: block;
-	padding:1em 0;
+	padding: 1em 0;
 }
 
 .scrollTop #top-content {
@@ -287,6 +299,46 @@ position:fixed;
 /*display:none;*/
 opacity: 0;
 transition: 0.2s;
+}
+
+#back-top a {
+float: right;
+width: 25px;
+height: 25px;
+z-index: 3333;
+position: fixed;
+right: 20px;
+text-align: right;
+margin-top: 10px;
+}
+
+#top-arrow1 {
+height: 13px;
+width: 3px;
+margin-left: 12px;
+background-color: white;
+transform: rotate(45deg);
+-ms-transform: rotate(45deg);
+-webkit-transform: rotate(45deg);
+Z-index: 33333;
+position: fixed;
+transition: 0.2s;
+margin-top: 8px;
+}
+
+#top-arrow2
+{
+height: 13px;
+width: 3px;
+background-color: white;
+transform: rotate(90deg);
+-ms-transform: rotate(90deg);
+-webkit-transform: rotate(-45deg);
+Z-index: 33333;
+margin-left: 20px;
+position: fixed;
+transition: 0.2s;
+margin-top: 8px;
 }
 
 @media only screen and (min-width: 768px) {
