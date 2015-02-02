@@ -1,3 +1,4 @@
+
 angular.module('HelpfulFilters', [])
 
   // Extracts the key from a list of objects.

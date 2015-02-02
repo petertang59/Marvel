@@ -43,10 +43,36 @@ transition: 0.5s;
 top: 0px;
 transform-origin: 50%;
 z-index: 4;
-background-image: url(img/ironman-comic.jpg);
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover;
+padding: 0;
+
+}
+
+.full .full-bg {
+	opacity: 1;
+	transition: 0.8s;
+}
+
+.full-bg {
+	width: 100%;
+	height: 100%;
+	
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	opacity: 0;
+	position:fixed;
+	z-index: -1;
+	transition: 0.8s;
+}
+
+.full-info {
+	padding: 0;
+	transition: 0.8s;
+}
+
+.full .full-info {
+	padding: 1em;
+	transition: 0.8s;
 }
 
 .full:hover  img{
@@ -165,9 +191,6 @@ li:hover .hero-img {
 .search-bar {
 	width: 100%;
 	height: 30px;
-}
-
-.input:hover {
 }
 
 .input {
