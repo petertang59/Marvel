@@ -258,7 +258,7 @@ margin:0.5em;
 }
 
 #exit-box {
-	float: left;
+float: left;
 width: 25px;
 height: 25px;
 z-index: 3333;
@@ -310,6 +310,15 @@ position: fixed;
 right: 20px;
 text-align: right;
 margin-top: 10px;
+}
+
+#back-top-bg {
+width: 100%;
+height: 100%;
+background: white;
+margin-left: 5px;
+margin-top: 2px;
+opacity:0.5;
 }
 
 #top-arrow1 {
