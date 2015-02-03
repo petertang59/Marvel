@@ -47,23 +47,11 @@ padding: 0;
 
 }
 
-.full .full-bg {
-	opacity: 1;
-	transition: 0.8s;
+.full .bio {
+	display: block;
+	transition: 0.5s;
 }
 
-.full-bg {
-	width: 100%;
-	height: 100%;
-	
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	opacity: 0;
-	position:fixed;
-	z-index: -1;
-	transition: 0.8s;
-}
 
 .full-info {
 	padding: 0;
@@ -83,11 +71,6 @@ padding: 0;
     opacity: 1.0;
 }
 
-.full .bio {
-	display: block;
-	transition: 0.5s;
-}
-
 .full img:hover {
 	opacity: 1.0;
 }
@@ -98,6 +81,24 @@ padding: 0;
 	transition: 0.8s;
 	margin: auto;
 }
+
+/*.full .full-bg {
+	opacity: 1;
+	transition: 0.8s;
+}
+
+.full-bg {
+	width: 100%;
+	height: 100%;
+	
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	opacity: 0;
+	position:fixed;
+	z-index: -1;
+	transition: 0.8s;
+}*/
 
 html {
 	font-family: Open Sans;

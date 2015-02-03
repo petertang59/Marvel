@@ -1,14 +1,6 @@
 
 angular.module('HelpfulFilters', [])
 
-  // Extracts the key from a list of objects.
-  //
-  // suage:
-  //
-  //     <p>Heroes</p>
-  //     <ul>
-  //       <li ng-repeat="hero in heroes | extractKey:'name'">{{hero}}</li>
-  //     </ul>
   .filter('extractKey', function () {
     return function (input, key) {
       console.log(input, key);
@@ -18,13 +10,6 @@ angular.module('HelpfulFilters', [])
     }
   })
 
-  // Outputs unique elements from the list.
-  //
-  // usage:
-  //
-  //     <select ng-repeat="team in heroes | extractKey:'team' | unique">
-  //       <option>{{team}}</option>
-  //     </select>
   .filter('unique', function () {
     return function (input) {
       console.log(input);
@@ -36,16 +21,6 @@ angular.module('HelpfulFilters', [])
     }
   })
 
-  // Filters objects in list by key.
-  //
-  // usage:
-  //
-  //     <p>Heroes</p>
-  //     <ul>
-  //       <li ng-repeat="hero in heroes | conditionalStrictFilterKey:searchTeam:team">
-  //         {{hero.name}} {{hero.team}} {{hero.species}}
-  //       </li>
-  //     </ul>
   .filter('conditionalStrictFilterKey', function () {
     return function (input, query, key) {
       console.log(input, query, key);
@@ -59,7 +34,6 @@ angular.module('HelpfulFilters', [])
 
 var HeroApp = angular.module('HeroApp', ['HelpfulFilters']);
 
-
 HeroApp.controller('HeroListCtrl', function ($scope) {
   $scope.herosList = [
     {'name': 'Iron Man',
@@ -69,7 +43,6 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
       'imageUrl':'img/ironman.png', 
       'bgcolor':'#9e3d3b',
       'id':'ironman',
-      'comic':'img/ironman-comic.jpg',
       'bio':'An American billionaire playboy, industrialist, and ingenious engineer, Tony Stark suffers a severe chest injury during a kidnapping in which his captors attempt to force him to build a weapon of mass destruction. He instead creates a powered suit of armor to save his life and escape captivity.' },
     
     {'name': 'Captain America',

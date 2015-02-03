@@ -3,12 +3,6 @@
   <script src="bower_components/angular/angular.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
   <script src="js/controllers.js"></script>
-  <script src="js/utils/ui-utils.js"></script>
-  <script src="js/script.js"></script>
-
-  <script>$( "#{{Hero.id}}" ).click(function() {
-  alert( "Handler for .click() called." );
-});</script>
 
   <script>
       $(document).ready(function(){
@@ -25,21 +19,6 @@
   </script>
 
 <script>
-// $(window).scroll(function() {    
-//     var scroll = $(window).scrollTop();
-
-//     if (scroll >= 30) {
-//         $("#top-content").addClass("scrollTop");
-//         $(".content").addClass("content-scroll");
-//         $("#sandwich-icon").addClass("visible");
-//     } else {
-//         $("#top-content").removeClass("scrollTop");
-//         $("#sandwich-icon").removeClass("visible");
-//          $(".content").removeClass("content-scroll");
-//     }
-// });
-
-
 $(document).ready(function(){
 
   // hide #back-top first
@@ -63,27 +42,18 @@ $(document).ready(function(){
       return false;
     });
   });
-
 });
 </script>
-
-     <script>
-            $(document).ready(function() {
-                $('input.deletable').wrap('<button class="reset" />').after($('<span/>').click(function() {
-                    $(this).prev('input').val('').focus();
-                }));
-            });
-        </script>
 
   <link rel="stylesheet" href="style.css"/>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,300' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body ng-controller="HeroListCtrl">
 <div class="container">
-    <div class="top">
-      
+    <div class="top"> 
       <div id="back-top">
         <a href="#top">
           <div id="top-arrow1"></div>
@@ -91,7 +61,6 @@ $(document).ready(function(){
         <div id="back-top-bg"></div>
         </a>
       </div>
-
   <div id="top-content">
     <div class="search-bar">
       <img id="search-icon" src="img/icons/search1.png"/>
@@ -120,8 +89,6 @@ $(document).ready(function(){
 <div class="content">
   <ul class="heroes">
   <li class="list" id='{{Hero.id}}' ng-click="toggle.state = !toggle.state" ng-class="{'full' : toggle.state}" ng-repeat="Hero in herosList | filter:query | orderBy:orderProp | conditionalStrictFilterKey:searchTeam:'team' | conditionalStrictFilterKey:searchSpecies:'species' | conditionalStrictFilterKey:searchAge:'age'" ng-style="{'background-color':Hero.bgcolor}";>
-    <div class="full-bg" style="background-image: url({{Hero.comic}});">
-      </div>
     <a id="exit-box" href="" ng-click="$(.list)toggle.state = $(.list)!toggle.state" ng-class="{'full' : toggle.state}">
     <div id="exit1"></div>
     <div id="exit2"></div>
@@ -135,7 +102,6 @@ $(document).ready(function(){
     <p>{{Hero.species}}</p>
     <p class="bio">{{Hero.bio}}</p>
   </div>
-    
   </li>
 </a>
 </ul>
