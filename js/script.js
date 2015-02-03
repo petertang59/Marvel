@@ -2,16 +2,6 @@ $( "#{{Hero.id}}" ).click(function() {
   alert( "Handler for .click() called." );
 });
 
-  $(document).ready(function(){
-        $(window).bind('scroll',function(e){
-            parallaxScroll();
-          });
-          function parallaxScroll(){
-            var scrolledY = $(window).scrollTop();
-          $('.top').css('background-position','center -'+((scrolledY*0.8))+'px');
-          }     
-      });
-
 
 $(document).ready(function(){
 
