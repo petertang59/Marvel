@@ -39,6 +39,15 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
 
   $scope.clearSearch = function() {
       $scope.query = '';
+  //      setTimeout(function() {
+  //     console.log('waited');
+
+  //     $scope.query = '';
+  //     $scope.$apply(); //use this after you change the model only if the model is not changed immedietely by ng-click
+
+  //   }, 1000);
+  // };
+
   };
 
   $scope.herosList = [
