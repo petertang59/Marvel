@@ -35,6 +35,12 @@ angular.module('HelpfulFilters', [])
 var HeroApp = angular.module('HeroApp', ['HelpfulFilters']);
 
 HeroApp.controller('HeroListCtrl', function ($scope) {
+  $scope.query = '';
+
+  $scope.clearSearch = function() {
+      $scope.query = '';
+  };
+
   $scope.herosList = [
     {'name': 'Iron Man',
       'team': 'Avengers',
