@@ -38,7 +38,7 @@ $(document).ready(function(){
     $('#back-top a').click(function () {
       $('body,html').animate({
         scrollTop: 0
-      }, 800);
+      }, 700);
       return false;
     });
   });
@@ -65,7 +65,7 @@ $(document).ready(function(){
     <div class="search-bar">
       <img id="search-icon" src="img/icons/search1.png"/>
       <input class="input" placeholder="Need a hero?" ng-model="query">
-      <button ng-click="clearSearch()"></button>
+      <button class="reset" ng-click="clearSearch()"><div id="reset-bg"></div><img id="reset-icon" src="img/icons/reset.png"/></button>
     </div>
   <br>
     <p>Sort by:</p>
