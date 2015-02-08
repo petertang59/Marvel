@@ -37,11 +37,13 @@ var HeroApp = angular.module('HeroApp', ['HelpfulFilters']);
 HeroApp.controller('HeroListCtrl', function ($scope) {
   $scope.query = '';
 
-    $scope.clearSearch = function() {
+    $scope.clearAll = function() {
       $scope.query = '';
       $scope.orderProp = 'name';
       $scope.searchSpecies = '';
       $scope.searchTeam = '';
+
+      
   //      setTimeout(function() {
   //     console.log('waited');
 
@@ -52,6 +54,11 @@ HeroApp.controller('HeroListCtrl', function ($scope) {
   // };
 
   };
+
+   $scope.clearSearch = function() {
+      $scope.query = '';
+
+    };
 
   $scope.herosList = [
     {'name': 'Iron Man',
