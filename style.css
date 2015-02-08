@@ -202,44 +202,55 @@ li:hover .hero-img {
 
 .input {
 	font-family: Open Sans;
-	text-align: center;
-	height: 30px;
-	background: white;
-	margin: 1em 1em;
-	border: none;
-	width: 30%;
-	display:inline-block;
-	vertical-align: middle;
-	border-radius: 15px;
-	font-size: 12px;
+text-align: center;
+height: 30px;
+background: white;
+margin: 1em 1em;
+border: none;
+width: 80%;
+display: inline-block;
+vertical-align: middle;
+border-radius: 15px;
+font-size: 12px;
+/* position: absolute; */
+/* margin: 10%; */
 }
 
 input:focus ~ #clear-icon {
-	display: inline-block;
 	opacity: 1;
 	transition: 0.5s;
 }
 
 #search-icon {
 	width: 20px;
-	margin: 5px;
-	display:inline-block;
-	vertical-align: middle;
+margin: 17px;
+display: inline-block;
+vertical-align: middle;
+position: absolute;
 
 }
 
-#clear-icon:hover {
+.search-group {
+	width: 50%;
+	margin: 1em 25%;
+}
+
+/*#clear-icon:hover {
 	opacity: 0.6;
 	transition: 0.5s;
-}
+}*/
 
 #clear-icon {
-	width: 20px;
-	margin: 5px;
-	vertical-align: middle;
-	transition: 0.5s;
-	/*display:none;*/
-	opacity: 0;
+width: 17px;
+margin: 5px;
+vertical-align: middle;
+transition: 0.5s;
+/* display: none; */
+opacity: 0;
+position: absolute;
+float: right;
+right: 30%;
+top: 46px;
 }
 
 .reset {
